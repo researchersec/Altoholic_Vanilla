@@ -1,4 +1,4 @@
-## Interface: 11500
+## Interface: 11505
 ## Title: Altoholic Classic by |cFF69CCF0Thaoky|r
 ## Title-zhCN: |cffeedd99 [物品] |r: 全角色统计 Altoholic
 
@@ -12,9 +12,9 @@
 ## Version: 1.15.007
 ## X-Category: Inventory, Tradeskill, Mail
 ## X-Localizations: enUS, frFR, zhCN, zhTW, deDE, koKR, esES, esMX, ruRU
-## X-Website: http://wow.curse.com/downloads/wow-addons/details/altoholic.aspx
+## X-Website: 
 ## X-eMail: thaoky.altoholic@yahoo.com
-## X-Donate: http://wow.curse.com/downloads/wow-addons/details/altoholic.aspx
+## X-Donate: 
 ## X-Credits: My guild (Odysseüs), all translators, the wowace community, and all users for their invaluable suggestions !
 ## Dependencies: DataStore, DataStore_Characters
 
