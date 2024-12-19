@@ -16,7 +16,7 @@ local OPTION_XPACK = "UI.Tabs.Grids.Tradeskills.CurrentXPack"
 local OPTION_TRADESKILL = "UI.Tabs.Grids.Tradeskills.CurrentTradeSkill"
 
 local currentDDMText
-local currentItemID
+local currentItemID = 0
 local currentList
 local dropDownFrame
 
@@ -118,7 +118,7 @@ local callbacks = {
 			local tradeskills = addon.TradeSkills.spellIDs
 			local currentXPack = addon:GetOption(OPTION_XPACK)
 			local currentTradeSkill = addon:GetOption(OPTION_TRADESKILL)
-			
+
 			currentList = LCI:GetProfessionCraftList(tradeskills[currentTradeSkill], currentXPack)
 			if not currentList.isSorted then
 				table.sort(currentList, SortByCraftLevel)
@@ -141,6 +141,7 @@ local callbacks = {
 			end
 			
 			currentItemID = DataStore:GetCraftResultItem(spellID)
+
 			local orange, yellow, green, grey = LCL:GetCraftLevels(spellID)
 			
 			if orange then
@@ -166,8 +167,7 @@ local callbacks = {
 			button.Name:SetPoint("BOTTOMRIGHT", 5, 0)
 			button.Background:SetDesaturated(false)
 			button.Background:SetTexCoord(0, 1, 0, 1)
-			
-			button.Background:SetTexture(GetItemIcon(currentItemID) or ICON_QUESTIONMARK)
+			button.Background:SetTexture((currentItemID and C_Item.GetItemIconByID(currentItemID)) or ICON_QUESTIONMARK)
 
 			local text = icons.notReady
 			local vc = 0.25	-- vertex color
