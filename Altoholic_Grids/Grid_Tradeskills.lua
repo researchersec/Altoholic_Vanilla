@@ -183,7 +183,6 @@ local callbacks = {
 					-- button.IconBorder:SetVertexColor(r, g, b, 0.5)
 					-- button.IconBorder:Show()
 				-- end
-				--if DataStore:IsCraftKnown(profession, currentList[dataRowID]) then
 				if DataStore:IsCraftKnown(profession, LCI:GetCraftResultItem(currentList[dataRowID])) then
 					vc = 1.0
 					text = icons.ready
