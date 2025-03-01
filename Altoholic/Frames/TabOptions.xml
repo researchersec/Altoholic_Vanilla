@@ -86,7 +86,6 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
-			<!-- <Slider name="$parent_SliderAngle" inherits="OptionsSliderTemplate"  minValue="1" maxValue="360" defaultValue="180" valueStep="1"> -->
 			<Slider name="$parent_SliderAngle" inherits="UISliderTemplateWithLabels"  minValue="1" maxValue="360" defaultValue="180" valueStep="1">
 				<Size x="180" y="16" />
 				<Anchors>
@@ -99,7 +98,6 @@
 					</OnValueChanged>
 				</Scripts>
 			</Slider>
-			<!-- <Slider name="$parent_SliderRadius" inherits="OptionsSliderTemplate"  minValue="1" maxValue="200" defaultValue="78" valueStep="1"> -->
 			<Slider name="$parent_SliderRadius" inherits="UISliderTemplateWithLabels"  minValue="1" maxValue="200" defaultValue="78" valueStep="1">
 				<Size x="180" y="16" />
 				<Anchors>
@@ -113,7 +111,6 @@
 				</Scripts>
 			</Slider>
 			
-			<!-- <Slider name="$parent_SliderScale" inherits="OptionsSliderTemplate"  minValue="0.5" maxValue="4.0" defaultValue="1.0" valueStep="0.1"> -->
 			<Slider name="$parent_SliderScale" inherits="UISliderTemplateWithLabels"  minValue="0.5" maxValue="4.0" defaultValue="1.0" valueStep="0.1">
 				<Size x="180" y="16" />
 				<Anchors>
@@ -161,7 +158,6 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<!-- <Slider name="$parent_SliderAlpha" inherits="OptionsSliderTemplate"  minValue="0.1" maxValue="1" defaultValue="1" valueStep="0.05"> -->
 			<Slider name="$parent_SliderAlpha" inherits="UISliderTemplateWithLabels"  minValue="0.1" maxValue="1" defaultValue="1" valueStep="0.05">
 				<Size x="180" y="16" />
 				<Anchors>
