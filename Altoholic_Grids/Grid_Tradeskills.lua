@@ -140,7 +140,7 @@ local callbacks = {
 				return
 			end
 			
-			currentItemID = DataStore:GetCraftResultItem(spellID)
+			currentItemID = LCI:GetCraftResultItem(spellID)
 
 			local orange, yellow, green, grey = LCL:GetCraftLevels(spellID)
 			
@@ -172,9 +172,9 @@ local callbacks = {
 			local text = icons.notReady
 			local vc = 0.25	-- vertex color
 			local tradeskills = addon.TradeSkills.spellIDs
-			local profession = DataStore:GetProfession(character, GetSpellInfo(tradeskills[addon:GetOption(OPTION_TRADESKILL)]))			
+			local profession = DataStore:GetProfession(character, GetSpellInfo(tradeskills[addon:GetOption(OPTION_TRADESKILL)]))
 
-			if #profession.Crafts ~= 0 then
+			if profession and #profession.Crafts ~= 0 then
 				-- do not enable this yet .. working fine, but better if more filtering allowed. ==> filtering on rarity
 				
 				-- local _, _, itemRarity, itemLevel = GetItemInfo(currentItemID)
@@ -183,8 +183,8 @@ local callbacks = {
 					-- button.IconBorder:SetVertexColor(r, g, b, 0.5)
 					-- button.IconBorder:Show()
 				-- end
-				
-				if DataStore:IsCraftKnown(profession, currentList[dataRowID]) then
+				--if DataStore:IsCraftKnown(profession, currentList[dataRowID]) then
+				if DataStore:IsCraftKnown(profession, LCI:GetCraftResultItem(currentList[dataRowID])) then
 					vc = 1.0
 					text = icons.ready
 				else
